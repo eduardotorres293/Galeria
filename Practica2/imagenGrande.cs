@@ -17,6 +17,20 @@ namespace Practica2
             InitializeComponent();
             pictureBox1.ImageLocation = imagenPath;
             this.Text = nombreImagen;
+
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            this.Resize += imgGrande_Resize;
+        }
+
+        // Esta función permite la redimensión del form, haciendo que se adapte al tamaño que se le de. Hay que tener en cuenta de que la
+        // dimensión minima dada es de 1280x720
+        private void imgGrande_Resize(object sender, EventArgs e)
+        {
+            pictureBox1.Width = this.ClientSize.Width;
+            pictureBox1.Height = this.ClientSize.Height;
+
+            pictureBox1.Left = (this.ClientSize.Width - pictureBox1.Width) / 2;
+            pictureBox1.Top = (this.ClientSize.Height - pictureBox1.Height) / 2;
         }
     }
 }
