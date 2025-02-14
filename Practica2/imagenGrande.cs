@@ -15,9 +15,11 @@ namespace Practica2
         public imagenGrande(string imagenPath, string nombreImagen)
         {
             InitializeComponent();
+            // Se utiliza el camino que se haya creado a la carpeta, y se le asigna el nombre
             pictureBox1.ImageLocation = imagenPath;
             this.Text = nombreImagen;
 
+            // Permite hacer que la imagen utilice el modo zoom, que permite ser mas estetica que redimensionarla de forma bruta
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             this.Resize += imgGrande_Resize;
         }

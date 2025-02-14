@@ -33,6 +33,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInsertar = new System.Windows.Forms.Button();
+            this.insertarImagen = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,11 +52,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label1.Location = new System.Drawing.Point(12, 167);
+            this.label1.Location = new System.Drawing.Point(12, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 74);
+            this.label1.Size = new System.Drawing.Size(275, 111);
             this.label1.TabIndex = 0;
-            this.label1.Text = "No hay imagenes \r\npara mostrar";
+            this.label1.Text = "AVISO: \r\nNo hay imagenes \r\npara mostrar";
             this.label1.Visible = false;
             // 
             // button3
@@ -62,7 +64,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.button3.Location = new System.Drawing.Point(12, 95);
+            this.button3.Location = new System.Drawing.Point(12, 159);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(251, 51);
             this.button3.TabIndex = 3;
@@ -75,7 +77,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(12, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(251, 51);
             this.button1.TabIndex = 4;
@@ -86,12 +88,28 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.btnInsertar);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 681);
             this.panel1.TabIndex = 5;
+            // 
+            // btnInsertar
+            // 
+            this.btnInsertar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnInsertar.Location = new System.Drawing.Point(12, 19);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(251, 51);
+            this.btnInsertar.TabIndex = 6;
+            this.btnInsertar.Text = "Añadir imagen";
+            this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // Form1
             // 
@@ -99,8 +117,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Form1";
@@ -118,6 +134,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.FolderBrowserDialog insertarImagen;
     }
 }
 
